@@ -1,0 +1,36 @@
+mysql> insert  into school (name,country,capacity) values ("Mahoutokoro School of Magic","Japan",800);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert  into school (name,country,capacity) values ("Uagadou School of Magic","Uganda",350);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> 
+
+mysql> update school set country="Sweden" where name = "Durmstrang Institute";
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update school set capacity = 700 where name = "Mahoutokoro School of Magic";
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> 
+
+mysql> delete from school where name like "%Magic%";
+Query OK, 3 rows affected (0.00 sec)
+
+mysql> 
+
+mysql> select * from school;
++----+----------------------------------------------+----------+----------------+
+| id | name                                         | capacity | country        |
++----+----------------------------------------------+----------+----------------+
+|  2 | Castelobruxo                                 |      380 | Brazil         |
+|  3 | Durmstrang Institute                         |      570 | Sweden         |
+|  4 | Hogwarts School of Witchcraft and Wizardry   |      450 | United KingDom |
+|  5 | Ilvermorny School of Witchcraft and Wizardry |      300 | USA            |
+|  6 | |Koldovstoretz                               |      125 | Russia         |
++----+----------------------------------------------+----------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> 
