@@ -4,7 +4,7 @@ group by team.id
 order by nbplayer desc
 
 
-select name, count(*) as nbplayer  from player 
+select name as nbplayer  from player 
 inner join team on team.id = player.team_id
 group by team.id
 having nbplayer >=14
