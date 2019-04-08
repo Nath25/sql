@@ -10,5 +10,5 @@ where player.role = "seeker" order by lastname, firstname
 
 
 select wizard.* from wizard 
-inner join player on player.wizard_id = wizard.id
-where role <> "quidditch"
+left join player on player.wizard_id = wizard.id
+where wizard_id is null
