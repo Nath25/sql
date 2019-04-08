@@ -1,0 +1,14 @@
+select lastname, firstname, role, name from wizard 
+inner join player on player.wizard_id = wizard.id 
+inner join team on team.id = player.team_id 
+order by name, role , lastname, firstname
+
+
+select firstname, lastname  from wizard 
+inner join player on player.wizard_id = wizard.id 
+where player.role = "seeker" order by lastname, firstname
+
+
+select wizard.* from wizard 
+inner join player on player.wizard_id = wizard.id
+where role <> "quidditch"
