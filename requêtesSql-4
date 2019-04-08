@@ -1,0 +1,20 @@
+select name, count(*) as nbplayer  from player 
+inner join team on team.id = player.team_id
+group by team.id
+order by nbplayer desc
+
+
+select name, count(*) as nbplayer  from player 
+inner join team on team.id = player.team_id
+group by team.id
+having nbplayer >=14
+order by nbplayer desc
+
+
+select name, lastname, firstname , enrollment_date from wizard 
+inner join player on player.wizard_id = wizard.id
+inner join team on team.id = player.team_id
+
+where DAYOFWEEK(player.enrollment_date) = 2
+and name = "Gryffindor"
+order by enrollment_date
